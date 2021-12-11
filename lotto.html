@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>내 손으로 직접 뽑는 로또번호 생성기</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
+        <link rel="canonical" href="https://imhopepang.netlify.app/lotto.html" />
+        <meta name="description" content="내 손으로 직접 뽑는 로또번호 생성기 입니다. 대박 나세요!!!." />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main3.css" />
+        <!-- meta -->
+        <meta property="og:url" content="https://imhopepang.netlify.app/lotto.html" />
+        <meta property="og:title" content="내 손으로 직접 뽑는 로또번호 생성기 입니다. 대박 나세요!!!." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://imhopepang.netlify.app/images/lotteryback.jpg" />
+        <meta
+            property="og:description"
+            content="내 손으로 직접 뽑는 로또번호 생성기 입니다. 대박 나세요!!!."
+        />
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script
+            type="text/javascript"
+            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61a9cf0aa03b8fdd"
+        ></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7S490WP1M"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-T7S490WP1M');
+        </script>
+
+   
+    </head>
+    <body class="landing is-preload">
+        <div id="page-wrapper">
+            <!-- Header -->
+            <header id="header" class="alt">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html" class="button">오늘 뭐먹지?</a></li>
+                        <li><a href="coin.html" class="button">동전 던지기!</a></li>
+                        <li><a href="lotto.html" class="button">로또번호 생성기</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <h2><b>로또번호 생성기</b></h2>
+                <p><b>내손으로 직접 뽑는 로또번호</b><br /></p>
+
+                <br />
+            </section>
+
+            <!-- Main -->
+            <section id="main" class="container">
+                <section class="box special">
+					  <ins
+                        class="kakao_ad_area"
+                        style="display: none;"
+                        data-ad-unit="DAN-awU3nnKLbGHaFSyW"
+                        data-ad-width="320"
+                        data-ad-height="50"
+                    ></ins>
+                    <script
+                        type="text/javascript"
+                        src="//t1.daumcdn.net/kas/static/ba.min.js"
+                        async
+                    ></script>
+                    <br />
+                    <header class="major" style="margin: 0;">
+                        <a><img
+                                style="width: auto; height: 250px; padding: 0 0 2em 0;"
+                                src="images/lotto.jpeg"
+                                name="canvas"
+                        /></a>
+                        <br />
+                        <a id="lottoTable2" style="display: none;"></a><br />
+                        <a id="lottoTable"></a><br />
+                        <a
+                            class="button primary"
+                            onclick="displayImage();"
+                            type="button"
+                            style="margin-top: 2em;"
+                        >
+                            번호 섞기</a
+                        >
+                        <a
+                            class="button primary1"
+                            onclick="chooSeone1();"
+                            type="button"
+                            style="margin-top: 2em;"
+                        >
+                            번호 뽑기</a
+                        >
+                        <a
+                            class="button primary2"
+                            onclick="arrayNewsss();"
+                            type="button"
+                            style="margin-top: 2em;"
+                        >
+                            번호 정렬</a
+                        >
+                        <br />
+                        <div
+                            class="addthis_inline_share_toolbox_ce4z"
+                            style="margin: 3em 0 2em 0;"
+                        ></div>
+                    </header>
+                </section>
+
+                <!-- CTA -->
+                <section id="cta">
+            
+					<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-rhat6ZpWHdVvVE4x" 
+ data-ad-width   = "300" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <ul class="copyright">
+                        <li>
+                            &copy; 나는호빵. All rights reserved.<br /><a
+                                href="https://www.youtube.com/c/%EC%A1%B0%EC%BD%94%EB%94%A9JoCoding/featured"
+                                target="_blank"
+                                >제작도움: 조코딩 유튜브채널</a
+                            >
+                        </li>
+                    </ul>
+                </footer>
+
+                <!-- Scripts -->
+                <script src="assets/js/jquery.min.js"></script>
+                <script src="assets/js/jquery.dropotron.min.js"></script>
+                <script src="assets/js/jquery.scrollex.min.js"></script>
+                <script src="assets/js/browser.min.js"></script>
+                <script src="assets/js/breakpoints.min.js"></script>
+                <script src="assets/js/util.js"></script>
+                <script src="assets/js/main.js"></script>
+
+                <script>
+                    var lotto = []; //6개로 값이 나열될것이기 때문에 배열처리 - 값은 담지 않음
+
+                    const uniqueArr2 = [];
+                    const uniqueArr3 = [];
+                    const uniqueArrstore = [];
+                    var tt = 0;
+
+                    function fisherYatesShuffle(arr) {
+                        for (var i = arr.length - 1; i > 0; i--) {
+                            var j = Math.floor(Math.random() * (i + 1)); //random index
+                            [arr[i], arr[j]] = [arr[j], arr[i]]; // swap
+                        }
+                    }
+
+                    function displayImage() {
+                        if (tm == 1) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: '번호를 뽑아주세요',
+                            });
+                        } else if (tm == 0) {
+                            xm = 0;
+                            tm = 1;
+
+                            uniqueArr2.shift();
+                            uniqueArr2.shift();
+                            uniqueArr2.shift();
+                            uniqueArr2.shift();
+                            uniqueArr2.shift();
+                            uniqueArr2.shift();
+                            uniqueArrstore.shift();
+                            uniqueArrstore.shift();
+                            uniqueArrstore.shift();
+                            uniqueArrstore.shift();
+                            uniqueArrstore.shift();
+                            uniqueArrstore.shift();
+                            document.canvas.src = 'images/lottomachine.gif';
+
+                            var tmpArray = [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                10,
+                                11,
+                                12,
+                                13,
+                                14,
+                                15,
+                                16,
+                                17,
+                                18,
+                                19,
+                                20,
+                                21,
+                                22,
+                                23,
+                                24,
+                                25,
+                                26,
+                                27,
+                                28,
+                                29,
+                                30,
+                                31,
+                                32,
+                                33,
+                                34,
+                                35,
+                                36,
+                                37,
+                                38,
+                                39,
+                                40,
+                                41,
+                                42,
+                                43,
+                                44,
+                                45,
+                            ];
+                            fisherYatesShuffle(tmpArray);
+
+                            uniqueArr2.push(tmpArray[0]);
+                            uniqueArr2.push(tmpArray[1]);
+                            uniqueArr2.push(tmpArray[2]);
+                            uniqueArr2.push(tmpArray[3]);
+                            uniqueArr2.push(tmpArray[4]);
+                            uniqueArr2.push(tmpArray[5]);
+                            uniqueArrstore.push(tmpArray[0]);
+                            uniqueArrstore.push(tmpArray[1]);
+                            uniqueArrstore.push(tmpArray[2]);
+                            uniqueArrstore.push(tmpArray[3]);
+                            uniqueArrstore.push(tmpArray[4]);
+                            uniqueArrstore.push(tmpArray[5]);
+
+                            uniqueArrstore.sort(function(a, b)  {
+                            return a - b;
+                            });
+
+                        }
+                    }
+
+                    var paragraph = document.getElementById('www');
+                    var xm = 0;
+                    var tm = 0;
+
+
+                    function arrayNewsss() {
+                        if (xm == 6) {
+                            
+                            document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML = document.getElementById('lottoTable2').innerHTML;
+                        } else {
+                            Swal.fire({
+                                    icon: 'success',
+                                    title: '번호를 마저 뽑아주세요',
+                                });
+                        }
+                    }
+
+                    function chooSeone1() {
+                        if (tm == 0) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: '번호를 섞어주세요',
+                            });
+                        } else {
+                            if (xm == 0) {
+                                if (uniqueArr2[0] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="yellow">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="blue">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="red">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="grey">${uniqueArr2[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="green">${uniqueArr2[xm]}</div>`;
+                                }
+
+                                if (uniqueArrstore[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="yellow">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="blue">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="red">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="grey">${uniqueArrstore[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="green">${uniqueArrstore[xm]}</div>`;
+                                }
+                                xm = 1;
+                            } else if (xm == 1) {
+                                if (uniqueArr2[1] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="yellow">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="blue">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="red">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="grey">${uniqueArr2[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="green">${uniqueArr2[xm]}</div>`;
+                                }
+
+                                if (uniqueArrstore[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="yellow">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="blue">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="red">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="grey">${uniqueArrstore[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="green">${uniqueArrstore[xm]}</div>`;
+                                }
+                                xm = 2;
+                                
+                            } else if (xm == 2) {
+                                if (uniqueArr2[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="yellow">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="blue">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="red">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="grey">${uniqueArr2[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="green">${uniqueArr2[xm]}</div>`;
+                                }
+
+                                if (uniqueArrstore[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="yellow">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="blue">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="red">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="grey">${uniqueArrstore[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="green">${uniqueArrstore[xm]}</div>`;
+                                }
+                                xm = 3;
+                            } else if (xm == 3) {
+                                if (uniqueArr2[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="yellow">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="blue">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="red">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="grey">${uniqueArr2[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="green">${uniqueArr2[xm]}</div>`;
+                                }
+
+                                if (uniqueArrstore[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="yellow">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="blue">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="red">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="grey">${uniqueArrstore[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="green">${uniqueArrstore[xm]}</div>`;
+                                }    
+                                xm = 4;
+                            } else if (xm == 4) {
+                                if (uniqueArr2[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="yellow">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="blue">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="red">${uniqueArr2[xm]}</div>`;
+                                } else if (uniqueArr2[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="grey">${uniqueArr2[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="green">${uniqueArr2[xm]}</div>`;
+                                }
+
+                                if (uniqueArrstore[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="yellow">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="blue">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="red">${uniqueArrstore[xm]}</div>`;
+                                } else if (uniqueArrstore[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="grey">${uniqueArrstore[xm]}</div>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="green">${uniqueArrstore[xm]}</div>`;
+                                }    
+
+                                xm = 5;
+                            } else if (xm == 5) {
+                                if (uniqueArr2[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="yellow">${uniqueArr2[xm]}</div><br>`;
+                                } else if (uniqueArr2[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="blue">${uniqueArr2[xm]}</div><br>`;
+                                } else if (uniqueArr2[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="red">${uniqueArr2[xm]}</div><br>`;
+                                } else if (uniqueArr2[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="grey">${uniqueArr2[xm]}</div><br>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable'
+                                    ).innerHTML += `<div id="green">${uniqueArr2[xm]}</div><br>`;
+                                }
+
+                                if (uniqueArrstore[xm] <= 10) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="yellow">${uniqueArrstore[xm]}</div><br>`;
+                                } else if (uniqueArrstore[xm] <= 20) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="blue">${uniqueArrstore[xm]}</div><br>`;
+                                } else if (uniqueArrstore[xm] <= 30) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="red">${uniqueArrstore[xm]}</div><br>`;
+                                } else if (uniqueArrstore[xm] <= 40) {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="grey">${uniqueArrstore[xm]}</div><br>`;
+                                } else {
+                                    document.querySelector(
+                                        '#lottoTable2'
+                                    ).innerHTML += `<div id="green">${uniqueArrstore[xm]}</div><br>`;
+                                }    
+
+                                document.canvas.src = 'images/lotto.jpeg';
+
+                                xm = 6;
+                                tm = 0;
+                            } else if (xm > 5) {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: '번호를 섞어주세요',
+                                });
+                            }
+                        }
+                    }
+                </script>
+            </section>
+        </div>
+    </body>
+</html>
